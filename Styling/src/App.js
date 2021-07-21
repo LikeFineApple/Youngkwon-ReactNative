@@ -4,6 +4,7 @@ import React from 'react';
 import {StyleSheet, View, Text} from 'react-native';
 import {viewStyles, textStyles} from './style';
 import {Header, Contents, Footer} from './components/Layout';
+import ShadowBox from './components/ShadowBox';
 
 const App = () => {
   return (
@@ -14,9 +15,10 @@ const App = () => {
       <Text style={[textStyles.text, textStyles.error]}>
         Inline Styling - Error
       </Text> */}
-      <Header />
+      {/* <Header />
       <Contents />
-      <Footer />
+      <Footer /> */}
+      <ShadowBox />
     </View>
   );
 };
