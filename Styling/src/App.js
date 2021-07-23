@@ -28,13 +28,13 @@ const App = () => {
     //   {/* <Header />
     //   <Contents />
     //   <Footer /> */}
-    //   <ShadowBox />
+    // <ShadowBox />
     // </View>
-    <Container>
-      <Button title="Hanbit"></Button>
-      <Button title="React Natvie"></Button>
-      <Input />
-    </Container>
+    // <Container>
+    //   <Button title="Hanbit"></Button>
+    //   <Button title="React Natvie"></Button>
+    //   <Input />
+    // </Container>
   );
 };
 
