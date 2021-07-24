@@ -26,6 +26,7 @@ const Input = ({placeholder}) => {
       autoCapitalize="none"
       autoCorrect={false}
       returnKeyType="done"
+      keyboardAppearance="dark"
     />
   );
 };
