@@ -8,6 +8,7 @@
 |    Chap 02 [Set Up]    | Expo, Command-Line-Interface, npm | 
 |    Chap 03 [Component]     | JSX, props, state, event |
 |    Chap 04 [Styling]     | Inline styling, Styled-Components |
+|    Chap 05 [TODO-App]     | - |
 
 <br><br>
 
