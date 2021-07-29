@@ -8,12 +8,11 @@ const Icon = styled.Image`
   tint-color: ${({theme}) => theme.text};
   width: 30px;
   height: 30px;
-  margin: 10px;
 `;
 
 const IconButton = ({type, onPressOut}) => {
   return (
-    <Pressable onPressOut={onPressOut}>
+    <Pressable onPressOut={onPressOut} hitSlop={10}>
       <Icon source={type} />
     </Pressable>
   );
