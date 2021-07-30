@@ -38,8 +38,12 @@ export default function App() {
   });
 
   const _addTask = () => {
-    alert(`Add: ${newTask}`);
+    const ID = Date.now().toString();
+    const newTaskObject = {
+      [ID]: { id: ID, text: newTask, completed: false },
+    };
     setNewTask('');
+    setTasks({ ...tasks, ...newTaskObject });
   };
 
   const _handleTextChange = text => {
@@ -64,7 +68,7 @@ export default function App() {
           {Object.values(tasks)
             .reverse()
             .map(item => (
-              <Task key={list.id} text={item.text} />
+              <Task key={item.id} text={item.text} />
             ))}
         </List>
       </Container>
