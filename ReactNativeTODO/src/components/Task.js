@@ -30,7 +30,7 @@ const Task = ({text}) => {
   );
 };
 
-Task.PropTypes = {
+Task.propTypes = {
   text: PropTypes.string.isRequired,
 };
 
