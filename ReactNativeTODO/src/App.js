@@ -30,6 +30,12 @@ export default function App() {
   const width = Dimensions.get('window').width;
 
   const [newTask, setNewTask] = useState('');
+  const [tasks, setTasks] = useState({
+    '1': { id: '1', text: 'Hanbit', completed: false },
+    '2': { id: '2', text: 'React Native', completed: true },
+    '3': { id: '3', text: 'React Native Sample', completed: false },
+    '4': { id: '4', text: 'Edit TODO Item', completed: false },
+  });
 
   const _addTask = () => {
     alert(`Add: ${newTask}`);
@@ -55,10 +61,11 @@ export default function App() {
           onSubmitEditing={_addTask}
         />
         <List width={width}>
-          <Task text="Hanbit" />
-          <Task text="React Native" />
-          <Task text="React Native Sample" />
-          <Task text="Edit TODO item" />
+          {Object.values(tasks)
+            .reverse()
+            .map(item => (
+              <Task key={list.id} text={item.text} />
+            ))}
         </List>
       </Container>
     </ThemeProvider>
