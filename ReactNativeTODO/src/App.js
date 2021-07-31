@@ -52,6 +52,12 @@ export default function App() {
     setTasks(currentTasks);
   }
 
+  const _toggleTask = id => {
+    const currentTasks = Object.assign({}, tasks);
+    currentTasks[id]['completed'] = !currentTasks[id]['completed'];
+    setTasks(currentTasks);
+  };
+
   const _handleTextChange = text => {
     setNewTask(text)
   };
