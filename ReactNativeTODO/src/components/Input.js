@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import styled from 'styled-components/native';
 import {useWindowDimensions} from 'react-native';
@@ -16,7 +17,13 @@ const StyledInput = styled.TextInput.attrs(({theme}) => ({
   color: ${({theme}) => theme.text};
 `;
 
-const Input = ({placeholder, value, onChangeText, onSubmitEditing}) => {
+const Input = ({
+  placeholder,
+  value,
+  onChangeText,
+  onSubmitEditing,
+  onBlur,
+}) => {
   const width = useWindowDimensions().width;
 
   return (
@@ -31,6 +38,7 @@ const Input = ({placeholder, value, onChangeText, onSubmitEditing}) => {
       value={value}
       onChangeText={onChangeText}
       onSubmitEditing={onSubmitEditing}
+      onBlur={onBlur}
     />
   );
 };
@@ -40,6 +48,7 @@ Input.propTypes = {
   value: PropTypes.string.isRequired,
   onChangeText: PropTypes.func.isRequired,
   onSubmitEditing: PropTypes.func.isRequired,
+  onBlur: PropTypes.func.isRequired,
 };
 
 export default Input;
